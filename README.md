@@ -72,8 +72,7 @@ The robot moves in the direction of the sound source and continuously adjusts it
    ### 1. List of components: 
 |Item name| Picture|Description|
 |---------|--------|-----------|
-|Battery pack|![4xAA-battery-holder-picture](https://github.com/user-attachments/assets/30297ea7-6351-4d28-ad69-7d370d34a528)
-|This is the power supply for your robot. Battery packs come in all shapes and sizes. The one in this project holds 4 AA batteries.|
+|Battery pack|![4xAA-battery-holder-picture](https://github.com/user-attachments/assets/30297ea7-6351-4d28-ad69-7d370d34a528) width="300"|This is the power supply for your robot. Battery packs come in all shapes and sizes. The one in this project holds 4 AA batteries.|
  
 ##
 </details>
