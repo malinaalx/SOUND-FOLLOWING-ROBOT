@@ -82,12 +82,9 @@ The robot moves in the direction of the sound source and continuously adjusts it
 |PIR Sensor|![PIR-sensor](https://github.com/user-attachments/assets/3bddc401-6cc1-4a43-a7d7-3542580a453e)|The passive infrared sensor acts as a motion detector. It has an output put that stays "low" (0 volts [V]) when it does not detect motion, and goes "high" (3.3 V) when it detects motion. This output can be used to activate other things in the circuit.|
 |Male-female jumper wire|![M-F-jumper-wires](https://github.com/user-attachments/assets/e3fa5ca9-0f19-40f8-a1b0-d3d1bdf29166)|This is a special type of jumper wire that comes with a female connector on one end and a male connector on the other end.|
 
+#  Breadboard diagram for the circuit. 
+![sound-tracking-robot-breadboard-diagram](https://github.com/user-attachments/assets/7803d519-aa83-4715-9cf2-e90fa84492b4)
 
-
-
-
-
- 
 ##
 </details>
 
