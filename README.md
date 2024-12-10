@@ -22,7 +22,7 @@ Its operation is based on capturing sound waves, processing data and generating 
 
 # Main components:
 
-Sound Sensors (Microphones): 
+### Sound Sensors (Microphones): 
 The robot is equipped with several strategically placed microphones to detect sound from different directions. Differences in sound intensity and time of arrival between microphones allow the source to be located.
 
 ### Processing unit (microcontroller): 
