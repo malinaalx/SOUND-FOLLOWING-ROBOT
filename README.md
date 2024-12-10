@@ -25,38 +25,38 @@ Its operation is based on capturing sound waves, processing data and generating 
 Sound Sensors (Microphones): 
 The robot is equipped with several strategically placed microphones to detect sound from different directions. Differences in sound intensity and time of arrival between microphones allow the source to be located.
 
-# Processing unit (microcontroller): 
+### Processing unit (microcontroller): 
 
 The data captured by the microphones is sent to the microcontroller, which analyzes the differences and determines the direction of the sound source using algorithms for localization and background noise filtering.
 
-# Drive system (motors and wheels): 
+### Drive system (motors and wheels): 
 
 After calculating the direction, the microcontroller sends commands to the motors, adjusting the speed and direction to point the robot towards the sound source.
 
-# Power: 
+### Power: 
 
 The robot is powered by a rechargeable battery, ensuring continuous operation of the electronics and motors.
 
-# Body and structure: 
+### Body and structure: 
 
 The physical design of the robot includes a robust platform that houses all components and enables stable movement on different types of terrain.
 
 
 # Mode of operation:
 
-# Detection:
+### Detection:
 
 Microphones pick up surrounding sounds and measure differences in intensity and timing.
 
-# Processing: 
+### Processing: 
 
 The data is analyzed to determine the precise direction of the sound source.
 
-# Decision: 
+### Decision: 
 
 The microcontroller compares the received information and decides the optimal direction of travel.
 
-# Movement: 
+### Movement: 
 
 The robot moves in the direction of the sound source and continuously adjusts its trajectory as it detects new sounds.
 
