@@ -84,6 +84,9 @@ The robot moves in the direction of the sound source and continuously adjusts it
 #  Breadboard diagram for the circuit. 
 ![sound-tracking-robot-breadboard-diagram](https://github.com/user-attachments/assets/7803d519-aa83-4715-9cf2-e90fa84492b4)
 
+#  Schematic for the circuit.
+![sound-tracking-robot-circuit-diagram](https://github.com/user-attachments/assets/2ca5329b-7363-4ac1-a745-67125943f7f2)
+
 ##
 </details>
 
