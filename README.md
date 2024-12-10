@@ -4,8 +4,10 @@
   <summary> <h2>  Introduction </h2> </summary>
     
   ##
-        The development of robotic technology has opened new horizons in the field of automation and human-machine interaction. An innovative example of the application of these technologies is the sound following robot. This type of robot has the ability to detect and move in the direction of a sound source, which makes it useful in various applications such as search and rescue, assisting the disabled, and home automation.
-        The present project aims to design and build a robot capable of following a sound source using specialized sensors and signal processing algorithms.
+  The development of robotic technology has opened new horizons in the field of automation and human-machine interaction.
+  An innovative example of the application of these technologies is the sound following robot.
+  This type of robot has the ability to detect and move in the direction of a sound source, which makes it useful in various applications such as search and rescue, assisting the disabled, and home automation.
+  The present project aims to design and build a robot capable of following a sound source using specialized sensors and signal processing algorithms.
   
 ##
 </details>
@@ -18,7 +20,7 @@
 The system involves the integration of directional microphones, a microcontroller for data processing and motors that allow the robot to move.
 Its operation is based on capturing sound waves, processing data and generating movement commands.
 # Main components:
-# Sound Sensors (Microphones): 
+Sound Sensors (Microphones): 
 The robot is equipped with several strategically placed microphones to detect sound from different directions. Differences in sound intensity and time of arrival between microphones allow the source to be located.
 # Processing unit (microcontroller): 
 The data captured by the microphones is sent to the microcontroller, which analyzes the differences and determines the direction of the sound source using algorithms for localization and background noise filtering.
