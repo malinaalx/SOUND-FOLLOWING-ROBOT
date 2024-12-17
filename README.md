@@ -101,7 +101,7 @@ Sends a signal to the L293D Module (motor control).
 Sends a signal to the LED (it lights up when the robot moves).
 Sends a signal to the Buzzer (emits sound).
 
-# L293D Module: 
+# L298N Module: 
 Controls the motors (through pins IN1, IN2, IN3, IN4 connected to the Arduino).
 
 # Motors: 
@@ -119,34 +119,21 @@ Receives a signal from the Arduino and emits a sound when the robot moves.
 
 # General Circuit Design Overview:
 
--Microphone (MAX4466): VCC to 5V on Arduino
-                       GND to GND on Arduino
-                       Signal output (DO) to a digital pin (AO-for Left Microphone, A1-for Right Microphone)
-
--L298N Motor Driver: IN1 and IN2 connected to pins 6 and 7 on Arduino (for Right Motor);
-                     IN3 and IN4 connected to pins 8 and 9 on Arduino (for Left Motor);
-                     VCC and GND to power supply and ground;
-
--Motors connected to OUT1, OUT2, OUT3, and OUT4;
-
--LED:Anode connected to pin 13 on Arduino;
-     Cathode connected to GND via a 220Ω resistor;
-
--Buzzer: One terminal connected to pin 5 on Arduino;
-         The other terminal connected to GND on Arduino;
 | **Component**        | **Pins Used**              |                                   
 |----------------------|----------------------------|
-| Microphone           |   -VCC to 5V on Arduino    |
-|                       |   -GND to GND on Arduino   |
-|                       |    -Signal output (DO) to a digital pin (AO-for Left Microphone, A1-for Right Microphone)| 
-|L298N Motor Driver    | -IN1 and IN2 connected to pins 6 and 7 on Arduino (for Right Motor); |
-|                         -IN3 and IN4 connected to pins 8 and 9 on Arduino (for Left Motor);  |
-|                         -VCC and GND to power supply and ground;                             |
+| Microphone           |   -VCC to 5V on Arduino    
+                          -GND to GND on Arduino   
+                           -Signal output (DO) to a digital pin (AO-for Left Microphone, A1-for Right Microphone)| 
+|L298N Motor Driver    | -IN1 and IN2 connected to pins 6 and 7 on Arduino (for Right Motor); 
+                         -IN3 and IN4 connected to pins 8 and 9 on Arduino (for Left Motor);  
+                         -VCC and GND to power supply and ground;                             |
 | Motors               | connected to OUT1 and OUT2 (Left Motor), OUT3 and OUT4 (Right Motor) ;         |
-| LED                  | -Anode connected to pin 13 on Arduino;                  |
-|                       |  -Cathode connected to GND via a 220Ω resistor;         | 
-|Buzzer                | -One terminal connected to pin 5 on Arduino;            |
-|                       |  -The other terminal connected to GND on Arduino;       |
+| LED                  | -Anode connected to pin 13 on Arduino;                  
+                        -Cathode connected to GND via a 220Ω resistor;         | 
+|Buzzer                | -One terminal connected to pin 5 on Arduino;            
+                      |  -The other terminal connected to GND on Arduino;       |
+
+
 ![WhatsApp Image 2024-12-17 at 21 22 15_cb7b2326](https://github.com/user-attachments/assets/9ba8fc2f-772e-4342-83a0-4c853fc0119d)
 ![WhatsApp Image 2024-12-17 at 21 22 15_ea829af7](https://github.com/user-attachments/assets/e35ca94b-a507-41a7-bcc4-fe31ce7dddba)
 ![WhatsApp Image 2024-12-17 at 21 22 15_56a94b0f](https://github.com/user-attachments/assets/2dcb6de9-c45b-40d9-87e0-9d1158a0c26c)
