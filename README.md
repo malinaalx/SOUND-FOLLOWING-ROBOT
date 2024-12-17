@@ -20,36 +20,36 @@
 The system involves the integration of directional microphones, an arduino uno for data processing and motors that allow the robot to move.
 Its operation is based on capturing sound waves, processing data and generating movement commands.
 
-### Main components:
+# Main components:
 
-# Sound Sensors (Microphones): 
+### Sound Sensors (Microphones): 
 The robot is equipped with multiple sound sensors placed around its structure to detect sound from various directions. The microphones capture sound intensities and changes in timing, allowing the robot to identify the source of the sound.
 
-# Control System (Arduino): 
+### Control System (Arduino): 
 The data collected by the microphones is sent to the Arduino board. It processes the sound data to detect patterns and determine the direction of the sound source. The Arduino then sends commands to control the motors based on this information
 
-# Drive system (motors and wheels): 
+### Drive system (motors and wheels): 
 The motors and wheels are powered by the Arduino's commands. Once the direction of the sound is determined, the Arduino adjusts the motor speeds and direction to move the robot toward the sound source
 
-# Power Supply: 
+### Power Supply: 
 The robot is powered by a set of rechargeable batteries, providing the necessary energy to run the electronics, motors, and sensors. The power system ensures the robot can operate continuously.
 
-# Physical Structure:
+### Physical Structure:
 The robot’s body is designed to house all the components securely, providing stability and mobility. The frame is constructed to support the motors, sensors, and power supply, ensuring smooth movement on various surfaces.
 
 
-### Mode of operation:
+# Mode of operation:
 
-# Sound Detection:
+### Sound Detection:
 The microphones continuously detect sounds in the environment. They measure differences in sound intensity and the time it takes for the sound to reach each microphone, allowing the robot to "hear" from different directions.
 
-# Data Processing: 
+### Data Processing: 
 The Arduino processes the data received from the microphones, analyzing the differences in sound signals to determine the direction of the sound source.
 
-# Decision: 
+### Decision: 
 The Arduino compares the sound data to decide the most appropriate direction for the robot to move. It makes real-time decisions based on the varying levels of sound detected from each microphone
 
-# Movement: 
+### Movement: 
 After determining the direction, the robot moves towards the sound source by adjusting the speed and direction of its motors. It continuously re-evaluates its position and makes adjustments as new sounds are detected.
 
 ##
@@ -91,29 +91,29 @@ After determining the direction, the robot moves towards the sound source by adj
                                |  
                                v  
                             [Buzzer]
-## Explanation:
-# Microphones: 
+### Explanation:
+### Microphones: 
   The sound sensors send signals to the Arduino UNO.
 
-# Arduino UNO: 
+### Arduino UNO: 
 Receives the signal from the microphones and controls other components.
 Sends a signal to the L293D Module (motor control).
 Sends a signal to the LED (it lights up when the robot moves).
 Sends a signal to the Buzzer (emits sound).
 
-# L298N Module: 
+### L298N Module: 
 Controls the motors (through pins IN1, IN2, IN3, IN4 connected to the Arduino).
 
-# Motors: 
+### Motors: 
 Rotate to move the robot.
 
-# LED: 
+### LED: 
 Receives a signal from the Arduino and lights up when the motors are running.
 
-# Buzzer: 
+### Buzzer: 
 Receives a signal from the Arduino and emits a sound when the robot moves.
                             
-##  Breadboard diagram for the circuit. 
+#  Breadboard diagram for the circuit. 
 ![Schema electrica](https://github.com/user-attachments/assets/9fa92b57-2b8b-4280-9c30-a9817a673cd2)
 
 # General Circuit Design Overview:
