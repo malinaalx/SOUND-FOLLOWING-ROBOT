@@ -61,7 +61,7 @@ After determining the direction, the robot moves towards the sound source by adj
 
   ##
   
-   ### 1. List of components: 
+   ### 1.BOM (BILL OF MATERIALS) : 
 |Item name|Role       |Source/Link|Datasheet|
 |---------|-----------|-----------|---------|
 |Arduino Uno| It processes signals from the sound sensors (microphones), and based on the detected sound intensity, it controls the motors|Kit|[Datasheet](https://store.arduino.cc/uno-rev3)|
@@ -75,10 +75,74 @@ After determining the direction, the robot moves towards the sound source by adj
 |Breadboard|Used for prototyping and connecting components without the need for soldering. It allows for easy setup of the circuit.|Kit|[Datasheet](https://components101.com/sites/default/files/component_datasheet/Breadboard%20Datasheet.pdf)|
 |Jumper Wires|Used to connect different components on the breadboard or to the Arduino|Kit|-|
 
+#  Schematic for the circuit.
+            [Microfoane]  
+                 |  
+                 v  
+            [Arduino UNO]  
+                 |      \  
+                 |       \  
+                 v        v  
+          [L293D Module]   [LED]  
+                 |             |  
+                 |             |  
+                 v             |  
+           [Motoare]           |  
+                               |  
+                               v  
+                            [Buzzer]
+## Explanation:
+# Microphones: 
+  The sound sensors send signals to the Arduino UNO.
+
+# Arduino UNO: 
+Receives the signal from the microphones and controls other components.
+Sends a signal to the L293D Module (motor control).
+Sends a signal to the LED (it lights up when the robot moves).
+Sends a signal to the Buzzer (emits sound).
+
+# L293D Module: 
+Controls the motors (through pins IN1, IN2, IN3, IN4 connected to the Arduino).
+
+# Motors: 
+Rotate to move the robot.
+
+# LED: 
+Receives a signal from the Arduino and lights up when the motors are running.
+
+# Buzzer: 
+Receives a signal from the Arduino and emits a sound when the robot moves.
+                            
 #  Breadboard diagram for the circuit. 
 
 
-#  Schematic for the circuit.
+
+# General Circuit Design Overview:
+Microphone (MAX4466)
+
+VCC to 5V on Arduino
+GND to GND on Arduino
+Signal output (DO) to a digital pin (AO-for Left Microphone, A1-for Right Microphone)
+
+L298N Motor Driver
+
+IN1 and IN2 connected to pins 6 and 7 on Arduino (for Right Motor);
+IN3 and IN4 connected to pins 8 and 9 on Arduino (for Left Motor);
+VCC and GND to power supply and ground;
+
+Motors connected to OUT1, OUT2, OUT3, and OUT4;
+
+LED
+Anode connected to pin 13 on Arduino;
+Cathode connected to GND via a 220Ω resistor;
+
+Buzzer
+One terminal connected to pin 5 on Arduino;
+The other terminal connected to GND on Arduino;
+
+![WhatsApp Image 2024-12-17 at 21 22 15_cb7b2326](https://github.com/user-attachments/assets/9ba8fc2f-772e-4342-83a0-4c853fc0119d)
+![WhatsApp Image 2024-12-17 at 21 22 15_ea829af7](https://github.com/user-attachments/assets/e35ca94b-a507-41a7-bcc4-fe31ce7dddba)
+![WhatsApp Image 2024-12-17 at 21 22 15_56a94b0f](https://github.com/user-attachments/assets/2dcb6de9-c45b-40d9-87e0-9d1158a0c26c)
 
 
 ##
