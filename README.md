@@ -23,42 +23,34 @@ Its operation is based on capturing sound waves, processing data and generating 
 # Main components:
 
 ### Sound Sensors (Microphones): 
-The robot is equipped with several strategically placed microphones to detect sound from different directions. Differences in sound intensity and time of arrival between microphones allow the source to be located.
+The robot is equipped with multiple sound sensors placed around its structure to detect sound from various directions. The microphones capture sound intensities and changes in timing, allowing the robot to identify the source of the sound.
 
-### Processing unit (microcontroller): 
-
-The data captured by the microphones is sent to the microcontroller, which analyzes the differences and determines the direction of the sound source using algorithms for localization and background noise filtering.
+### Control System (Arduino): 
+The data collected by the microphones is sent to the Arduino board. It processes the sound data to detect patterns and determine the direction of the sound source. The Arduino then sends commands to control the motors based on this information
 
 ### Drive system (motors and wheels): 
+The motors and wheels are powered by the Arduino's commands. Once the direction of the sound is determined, the Arduino adjusts the motor speeds and direction to move the robot toward the sound source
 
-After calculating the direction, the microcontroller sends commands to the motors, adjusting the speed and direction to point the robot towards the sound source.
+### Power Supply: 
+The robot is powered by a set of rechargeable batteries, providing the necessary energy to run the electronics, motors, and sensors. The power system ensures the robot can operate continuously.
 
-### Power: 
-
-The robot is powered by a rechargeable battery, ensuring continuous operation of the electronics and motors.
-
-### Body and structure: 
-
-The physical design of the robot includes a robust platform that houses all components and enables stable movement on different types of terrain.
+### Physical Structure:
+The robot’s body is designed to house all the components securely, providing stability and mobility. The frame is constructed to support the motors, sensors, and power supply, ensuring smooth movement on various surfaces.
 
 
 # Mode of operation:
 
-### Detection:
+### Sound Detection:
+The microphones continuously detect sounds in the environment. They measure differences in sound intensity and the time it takes for the sound to reach each microphone, allowing the robot to "hear" from different directions.
 
-Microphones pick up surrounding sounds and measure differences in intensity and timing.
-
-### Processing: 
-
-The data is analyzed to determine the precise direction of the sound source.
+### Data Processing: 
+The Arduino processes the data received from the microphones, analyzing the differences in sound signals to determine the direction of the sound source.
 
 ### Decision: 
-
-The microcontroller compares the received information and decides the optimal direction of travel.
+The Arduino compares the sound data to decide the most appropriate direction for the robot to move. It makes real-time decisions based on the varying levels of sound detected from each microphone
 
 ### Movement: 
-
-The robot moves in the direction of the sound source and continuously adjusts its trajectory as it detects new sounds.
+After determining the direction, the robot moves towards the sound source by adjusting the speed and direction of its motors. It continuously re-evaluates its position and makes adjustments as new sounds are detected.
 
 ##
 </details>
@@ -70,22 +62,24 @@ The robot moves in the direction of the sound source and continuously adjusts it
   ##
   
    ### 1. List of components: 
-|Item name| Picture|Description|
-|---------|--------|-----------|
-|Battery pack|![4xAA-battery-holder-picture](https://github.com/user-attachments/assets/30297ea7-6351-4d28-ad69-7d370d34a528) |This is the power supply for your robot. Battery packs come in all shapes and sizes. The one in this project holds 4 AA batteries.|
-|Breadboard|![breadboard-picture](https://github.com/user-attachments/assets/db718aed-d2c8-4224-a35a-be6ce7b3111b)|A breadboard allows you to quickly and easily connect wires and electronic components in order to build a circuit. The connections are not permanent, so you can easily move things around if you make a mistake.|
-|Switch|![spdt-switch-new](https://github.com/user-attachments/assets/5c182494-4efd-4488-915c-dff82771da9a)|You use switches every day to turn lights and appliances on and off. This is a tiny switch that fits on a breadboard, to let you turn your robot on and off.|
-|Jumper wire|![jumper-wires](https://github.com/user-attachments/assets/499a5e40-635e-4991-b5c2-82ebd709cc24)|Jumper wires are short wires used to make electrical connections on a breadboard. They come with many colors of plastic insulation, which makes it easy to color-code and organize complicated circuits.|
-|DC Motor|![DC-motor-picture](https://github.com/user-attachments/assets/444cc959-be85-4a92-bc9b-3f380f9bce9e)|Electrical current causes a motor to spin. Two motors drive the robot's wheels. This type of motor runs on direct current (DC) from a battery (as opposed to alternating current [AC] from a wall outlet).|
-|MOSFET|![MOSFET-picture](https://github.com/user-attachments/assets/9407b928-2af2-46fc-aa5b-300aac90c4fb)|A MOSFET is a special type of transistor, which acts like a control valve to let electrical current flow. As an analogy, think of how a valve can control the flow of water through a garden hose. In this circuit, the MOSFETs control the flow of current through the motors.|
-|Diode|![diode-picture](https://github.com/user-attachments/assets/5a18096b-90cf-4a2c-a84f-869f93813ac5)|A diode is like a one-way valve for electricity. It only lets current flow in one direction. In this circuit, diodes are used to protect the MOSFETs from voltage spikes that can be caused by abruptly stopping the motors.|
-|Male-female jumper wire|![M-F-jumper-wires](https://github.com/user-attachments/assets/e3fa5ca9-0f19-40f8-a1b0-d3d1bdf29166)|This is a special type of jumper wire that comes with a female connector on one end and a male connector on the other end.|
+|Item name|Role       |Source/Link|Datasheet|
+|---------|-----------|-----------|---------|
+|Arduino Uno| It processes signals from the sound sensors (microphones), and based on the detected sound intensity, it controls the motors|Kit|[Datasheet](https://store.arduino.cc/uno-rev3)|
+|L298N Motor Driver|The motor driver used to control the direction and speed of the DC motors. It takes control signals from the Arduino and drives the motors accordingly|[L298N-motor driver](https://roboromania.ro/produs/l298n/)|[Datasheet](https://www.sparkfun.com/datasheets/Robotics/L298_H_Bridge.pdf)|
+|Microphones|Detect surrounding sounds|[Module-MAX4466](https://roboromania.ro/produs/modulul-senzor-sunet-microfon-max4466/)|[Datasheet](https://www.analog.com/en/products/max4466.html)|
+|DC Motors|The motors drive the wheels, allowing the robot to move based on the commands from the Arduino|[DC Motor] (https://roboromania.ro/produs/motor-5v-reductor-si-roata-robot/)|[Datasheet](https://www.raveo.cz/sites/default/files/dkm/katalogy/motory/DC%20MOTOR%20(15W~120W).pdf)|
+|Batteries and Battery Holder|Powers the Arduino, motor driver, motors, and sensors|[AA Battery](https://www.sigmanortec.ro/Suport-Baterii-4AA-cu-Mufa-p148578749)|[Datasheet](https://www.mega-piles.com/im/VARTA-LR6-AA-1-5V-2750mAh-LONGLIFE-X8_722.pdf?srsltid=AfmBOoqPS6lykKANIgqjYkxszVXxVRQaqtvm_0OUlorjIxDFhsr4SlyJ)|
+|Resistor|Protect components by limiting the current, used for LED protection.|Kit|[Datasheet](https://eu.mouser.com/c/ds/passive-components/resistors/?resistance=220%20Ohms&srsltid=AfmBOoqYW_AjQohdrFB_rjpYFgMYbT1hn3V4-_5wQEuize5b8UXz_e9j)|
+|LED|LED used to indicate when the robot is moving|Kit|[Datasheet](https://www.mouser.com/datasheet/2/737/all-about-leds-932801.pdf?srsltid=AfmBOoo1mQnj_BAGlAsPsRZ1Onf-Gy5X-qO5hG1uBb6l8t24gUo3xy0j)|
+|Buzzer| A buzzer is used to provide an audible indication when the robot moves, giving a sound feedback to the user.|Kit|[Datasheet](https://www.farnell.com/datasheets/2171929.pdf)|
+|Breadboard|Used for prototyping and connecting components without the need for soldering. It allows for easy setup of the circuit.|Kit|[Datasheet](https://components101.com/sites/default/files/component_datasheet/Breadboard%20Datasheet.pdf)|
+|Jumper Wires|Used to connect different components on the breadboard or to the Arduino|Kit|-|
 
 #  Breadboard diagram for the circuit. 
-![sound-tracking-robot-breadboard-diagram](https://github.com/user-attachments/assets/7803d519-aa83-4715-9cf2-e90fa84492b4)
+
 
 #  Schematic for the circuit.
-![sound-tracking-robot-circuit-diagram](https://github.com/user-attachments/assets/2ca5329b-7363-4ac1-a745-67125943f7f2)
+
 
 ##
 </details>
