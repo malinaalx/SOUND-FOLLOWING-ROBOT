@@ -113,8 +113,8 @@ Receives a signal from the Arduino and lights up when the motors are running.
 # Buzzer: 
 Receives a signal from the Arduino and emits a sound when the robot moves.
                             
-#  Breadboard diagram for the circuit. 
-<img src="![Schema electrica](https://github.com/user-attachments/assets/e79ae965-bcd8-4f81-9ebf-b9e8a7bf18df)" width="300" />
+##  Breadboard diagram for the circuit. 
+![Schema electrica](https://github.com/user-attachments/assets/9fa92b57-2b8b-4280-9c30-a9817a673cd2)
 
 # General Circuit Design Overview:
 
