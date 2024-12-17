@@ -114,8 +114,9 @@ Receives a signal from the Arduino and lights up when the motors are running.
 Receives a signal from the Arduino and emits a sound when the robot moves.
                             
 #  Breadboard diagram for the circuit. 
+![Untitled Sketch_bb](https://github.com/user-attachments/assets/2d236325-4eb2-4716-9e29-ab78253c704f)
 
-
+![Untitled Sketch1_schemă](https://github.com/user-attachments/assets/db2fc31f-32d7-4c42-a1c7-3fecf70aa716)
 
 # General Circuit Design Overview:
 
