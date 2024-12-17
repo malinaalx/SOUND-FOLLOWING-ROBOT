@@ -17,7 +17,7 @@
   <summary> <h2> General Description </h2> </summary>
 
   ##
-The system involves the integration of directional microphones, a microcontroller for data processing and motors that allow the robot to move.
+The system involves the integration of directional microphones, an arduino uno for data processing and motors that allow the robot to move.
 Its operation is based on capturing sound waves, processing data and generating movement commands.
 
 # Main components:
@@ -67,7 +67,7 @@ After determining the direction, the robot moves towards the sound source by adj
 |Arduino Uno| It processes signals from the sound sensors (microphones), and based on the detected sound intensity, it controls the motors|Kit|[Datasheet](https://store.arduino.cc/uno-rev3)|
 |L298N Motor Driver|The motor driver used to control the direction and speed of the DC motors. It takes control signals from the Arduino and drives the motors accordingly|[L298N-motor driver](https://roboromania.ro/produs/l298n/)|[Datasheet](https://www.sparkfun.com/datasheets/Robotics/L298_H_Bridge.pdf)|
 |Microphones|Detect surrounding sounds|[Module-MAX4466](https://roboromania.ro/produs/modulul-senzor-sunet-microfon-max4466/)|[Datasheet](https://www.analog.com/en/products/max4466.html)|
-|DC Motors|The motors drive the wheels, allowing the robot to move based on the commands from the Arduino|[DC Motor] (https://roboromania.ro/produs/motor-5v-reductor-si-roata-robot/)|[Datasheet](https://www.raveo.cz/sites/default/files/dkm/katalogy/motory/DC%20MOTOR%20(15W~120W).pdf)|
+|DC Motors|The motors drive the wheels, allowing the robot to move based on the commands from the Arduino|[DC Motor](https://roboromania.ro/produs/motor-5v-reductor-si-roata-robot/)|[Datasheet](https://www.raveo.cz/sites/default/files/dkm/katalogy/motory/DC%20MOTOR%20(15W~120W).pdf)|
 |Batteries and Battery Holder|Powers the Arduino, motor driver, motors, and sensors|[AA Battery](https://www.sigmanortec.ro/Suport-Baterii-4AA-cu-Mufa-p148578749)|[Datasheet](https://www.mega-piles.com/im/VARTA-LR6-AA-1-5V-2750mAh-LONGLIFE-X8_722.pdf?srsltid=AfmBOoqPS6lykKANIgqjYkxszVXxVRQaqtvm_0OUlorjIxDFhsr4SlyJ)|
 |Resistor|Protect components by limiting the current, used for LED protection.|Kit|[Datasheet](https://eu.mouser.com/c/ds/passive-components/resistors/?resistance=220%20Ohms&srsltid=AfmBOoqYW_AjQohdrFB_rjpYFgMYbT1hn3V4-_5wQEuize5b8UXz_e9j)|
 |LED|LED used to indicate when the robot is moving|Kit|[Datasheet](https://www.mouser.com/datasheet/2/737/all-about-leds-932801.pdf?srsltid=AfmBOoo1mQnj_BAGlAsPsRZ1Onf-Gy5X-qO5hG1uBb6l8t24gUo3xy0j)|
