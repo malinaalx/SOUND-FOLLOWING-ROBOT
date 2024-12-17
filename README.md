@@ -121,17 +121,17 @@ Receives a signal from the Arduino and emits a sound when the robot moves.
 
 | **Component**        | **Pins Used**              |                                   
 |----------------------|----------------------------|
-| Microphone           |   -VCC to 5V on Arduino    
-                          -GND to GND on Arduino   
-                           -Signal output (DO) to a digital pin (AO-for Left Microphone, A1-for Right Microphone)| 
-|L298N Motor Driver    | -IN1 and IN2 connected to pins 6 and 7 on Arduino (for Right Motor); 
-                         -IN3 and IN4 connected to pins 8 and 9 on Arduino (for Left Motor);  
-                         -VCC and GND to power supply and ground;                             |
+| Microphone           |   -VCC to 5V on Arduino    |
+|                       |   -GND to GND on Arduino  | 
+|                        |   -Signal output (DO) to a digital pin (AO-for Left Microphone, A1-for Right Microphone)| 
+|L298N Motor Driver    | -IN1 and IN2 connected to pins 6 and 7 on Arduino (for Right Motor); |
+|                      |   -IN3 and IN4 connected to pins 8 and 9 on Arduino (for Left Motor); | 
+|                      |  -VCC and GND to power supply and ground;                             |
 | Motors               | connected to OUT1 and OUT2 (Left Motor), OUT3 and OUT4 (Right Motor) ;         |
-| LED                  | -Anode connected to pin 13 on Arduino;                  
-                        -Cathode connected to GND via a 220Ω resistor;         | 
-|Buzzer                | -One terminal connected to pin 5 on Arduino;            
-                      |  -The other terminal connected to GND on Arduino;       |
+| LED                  | -Anode connected to pin 13 on Arduino;                  |
+|                      |  -Cathode connected to GND via a 220Ω resistor;         | 
+|Buzzer                | -One terminal connected to pin 5 on Arduino;           | 
+|                      |  -The other terminal connected to GND on Arduino;       |
 
 
 ![WhatsApp Image 2024-12-17 at 21 22 15_cb7b2326](https://github.com/user-attachments/assets/9ba8fc2f-772e-4342-83a0-4c853fc0119d)
