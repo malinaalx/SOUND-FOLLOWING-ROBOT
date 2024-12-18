@@ -123,13 +123,13 @@ Receives a signal from the Arduino and emits a sound when the robot moves.
 | Microphone           |   -VCC to 5V on Arduino    |
 |                       |   -GND to GND on Arduino  | 
 |                        |   -Signal output (DO) to a digital pin (AO-for Left Microphone, A1-for Right Microphone)| 
-|L298N Motor Driver    | -IN1 and IN2 connected to pins 6 and 7 on Arduino (for Right Motor); |
+|L298N Motor Driver    | -IN1 and IN2 connected to pins 5 and 6 on Arduino (for Right Motor); |
 |                      |   -IN3 and IN4 connected to pins 8 and 9 on Arduino (for Left Motor); | 
 |                      |  -VCC and GND to power supply and ground;                             |
 | Motors               | connected to OUT1 and OUT2 (Left Motor), OUT3 and OUT4 (Right Motor) ;         |
 | LED                  | -Anode connected to pin 13 on Arduino;                  |
 |                      |  -Cathode connected to GND via a 220Ω resistor;         | 
-|Buzzer                | -One terminal connected to pin 5 on Arduino;           | 
+|Buzzer                | -One terminal connected to pin 7 on Arduino;           | 
 |                      |  -The other terminal connected to GND on Arduino;       |
 
 
