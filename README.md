@@ -149,7 +149,7 @@ Receives a signal from the Arduino and emits a sound when the robot moves.
   <summary> <h2> Results </h2> </summary>
 
   ##
-   TBD
+   https://youtube.com/shorts/uebZcvxGCT4?feature=share
   
 ##
 </details>
@@ -158,7 +158,20 @@ Receives a signal from the Arduino and emits a sound when the robot moves.
   <summary> <h2> Conclusions </h2> </summary>
 
   ##
-   TBD
+   ### Successfully Implemented Sound Localization
+In this project, I managed to use two microphones to detect sound direction. By comparing the amplitudes of the signals from the microphones, the robot could identify where the sound was coming from and adjust its movement accordingly.
+
+  ### Challenges I Faced
+One of the biggest challenges was placing the microphones at an optimal distance to ensure accurate sound detection. Another issue was reducing interference from background noise so that the robot could respond only to relevant sounds. I also had to experiment with the thresholds for movement decisions to achieve smooth and precise actions.
+
+  ### Achievements of the Project
+The robot can successfully detect and move toward a sound source. When it hears a loud noise, it calculates the direction, adjusts its position by turning, and moves forward. I also implemented features like activating a buzzer and LED when the sound is detected, though they only turn on briefly.
+
+ ### Improvements to Consider in the Future
+ -➡️ Fine-tuning the microphone placement for better accuracy.
+ -➡️ Adding sound filtering or processing to ignore background noise completely.
+ -➡️ Including obstacle detection to make the robot safer and more autonomous.
+ -➡️ Exploring ways to make the robot respond to quieter sounds or adapt to different environments.
   
 ##
 </details>
