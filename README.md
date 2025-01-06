@@ -168,10 +168,10 @@ One of the biggest challenges was placing the microphones at an optimal distance
 The robot can successfully detect and move toward a sound source. When it hears a loud noise, it calculates the direction, adjusts its position by turning, and moves forward. I also implemented features like activating a buzzer and LED when the sound is detected, though they only turn on briefly.
 
  ### Improvements to Consider in the Future
- ➡️ Fine-tuning the microphone placement for better accuracy.
- ➡️ Adding sound filtering or processing to ignore background noise completely.
- ➡️ Including obstacle detection to make the robot safer and more autonomous.
- ➡️ Exploring ways to make the robot respond to quieter sounds or adapt to different environments.
+ -➡️ Fine-tuning the microphone placement for better accuracy.
+ -➡️ Adding sound filtering or processing to ignore background noise completely.
+ -➡️ Including obstacle detection to make the robot safer and more autonomous.
+ -➡️ Exploring ways to make the robot respond to quieter sounds or adapt to different environments.
   
 ##
 </details>
