@@ -104,7 +104,9 @@ Receives a signal from the Arduino and lights up when the motors are running.
 Receives a signal from the Arduino and emits a sound when the robot moves.
                             
 #  Breadboard diagram for the circuit. 
-![schema_fritzing](https://github.com/user-attachments/assets/a1bbf549-da6e-4a85-9231-9df124d3dee0)
+<a>
+  <img src="https://github.com/malinaalx/SOUND-FOLLOWING-ROBOT/blob/master/images/schema_fritzing.jpg" width="800"/>
+</a>
 
 # General Circuit Design Overview:
 
