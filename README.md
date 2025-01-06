@@ -125,9 +125,9 @@ Receives a signal from the Arduino and emits a sound when the robot moves.
 |                      |  -The other terminal connected to GND on Arduino;       |
 
 <a>
-  <img src="https://github.com/malinaalx/SOUND-FOLLOWING-ROBOT/blob/master/images/imag1.jpg" width="800"/>
-  <img src="https://github.com/malinaalx/SOUND-FOLLOWING-ROBOT/blob/master/images/imag2.jpg" width="800"/>
-  <img src="https://github.com/malinaalx/SOUND-FOLLOWING-ROBOT/blob/master/images/imag3.jpg" width="800"/>
+  <img src="https://github.com/malinaalx/SOUND-FOLLOWING-ROBOT/blob/master/images/imag1.jpg" width="500"/>
+  <img src="https://github.com/malinaalx/SOUND-FOLLOWING-ROBOT/blob/master/images/imag2.jpg" width="500"/>
+  <img src="https://github.com/malinaalx/SOUND-FOLLOWING-ROBOT/blob/master/images/imag3.jpg" width="500"/>
 </a>
 
 
