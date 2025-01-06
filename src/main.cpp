@@ -1,16 +1,15 @@
 #include<Arduino.h>
-/*
- * Complete code for a sound-following robot that uses
- * two microphones to drive toward a sound source.
- */
+
 
 // declare constant variables for motor control pins
 const int leftMotorForwardPin = 5;
 const int leftMotorBackwardPin = 6;
 const int rightMotorForwardPin = 8;
 const int rightMotorBackwardPin = 9;
-//const int leftMotorSpeedPin = 9;
-//const int rightMotorSpeedPin = 6;
+
+
+const int buzzerPin = 7;      // Buzzer on pin 7
+const int ledPin = 13;        // LED on pin 13
 
 // constant variables for microphone pins
 const int mic1pin = A0;
@@ -29,6 +28,8 @@ int amp2;      // largest amplitude of mic2 during sample window (max-min)
 int difference;  // difference between the mic amplitudes
 unsigned long start_time;  // time in milliseconds at start of sample window (since program started)
 
+const int lowAmplitudeThreshold = 100; 
+
 void setup() {
   // set motor control pins as outputs
   pinMode(leftMotorForwardPin, OUTPUT);
@@ -37,10 +38,11 @@ void setup() {
   pinMode(rightMotorBackwardPin, OUTPUT);
   //pinMode(leftMotorSpeedPin, OUTPUT);
   //pinMode(rightMotorSpeedPin, OUTPUT);
-  
-  // set the H-bridge enable pins for speed control HIGH
-  //digitalWrite(leftMotorSpeedPin, HIGH);
-  //digitalWrite(rightMotorSpeedPin, HIGH);
+
+   // Configure LED and buzzer as OUTPUT
+  pinMode(buzzerPin, OUTPUT);
+  pinMode(ledPin, OUTPUT);
+
 
   Serial.begin(115200);  // initialize serial communication for debugging
 }
@@ -117,15 +119,48 @@ void loop() {
   Serial.print(" | Difference = ");
   Serial.println(difference);
 
-  // Algorithm to move robot toward sound source
-  if (difference > 50) { // Sound is stronger on mic1
+ // Check if sound levels are low
+  const int soundThreshold = 50; 
+  if (amp1 < soundThreshold && amp2 < soundThreshold) {
+    Serial.println("No significant sound detected. Staying still.");
+    stopDriving();
+    digitalWrite(buzzerPin, LOW); //  buzzer is off
+    digitalWrite(ledPin, LOW);    // LED is off
+    return; // Exit loop early
+  }
+else 
+{  // Turn on the LED and buzzer when sound is detected
+  digitalWrite(buzzerPin, HIGH);
+  digitalWrite(ledPin, HIGH);
+  delay(200); // Flash the LED and buzzer briefly
+  digitalWrite(buzzerPin, LOW);
+  digitalWrite(ledPin, LOW);
+
+if (amp1 < lowAmplitudeThreshold && amp2 < lowAmplitudeThreshold) {
+    // when sound is weak->robot will drive forward
+    Serial.println("Sound is weak - Driving forward");
+    driveForward();
+    delay(200);
+  }
+
+else 
+ {
+  if (difference > soundThreshold) { // Sound is stronger on mic1
+  Serial.println("Turning left...");
     turnLeft();
-    delay(300);  // Adjust duration for sharper turns if needed
-  } else if (difference < -50) { // Sound is stronger on mic2
+    delay(500);  // Adjust duration for sharper turns if needed
+   
+  } else if (difference < -soundThreshold) { // Sound is stronger on mic2
+  Serial.println("Turning right...");
     turnRight();
-    delay(300);
+    delay(500);
+  
    } else { // Sound is roughly equal
     driveForward();
     delay(500);
   }
+  digitalWrite(buzzerPin, LOW);
+  digitalWrite(ledPin, LOW);
+    }
+ } //delay(100); // Pause for stability
 }
