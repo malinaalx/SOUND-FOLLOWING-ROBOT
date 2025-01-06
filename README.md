@@ -78,7 +78,7 @@ After determining the direction, the robot moves towards the sound source by adj
 
 #  Schematic for the circuit.
 <a>
-  <img src="https://github.com/malinaalx/SOUND-FOLLOWING-ROBOT/blob/main/images/block_diagram.png" width="800"/>
+  <img src="https://github.com/malinaalx/SOUND-FOLLOWING-ROBOT/blob/master/images/block_diagram.png" width="800"/>
 </a>
 
 ### Explanation:
